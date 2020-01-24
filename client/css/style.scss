@@ -1,0 +1,559 @@
+$primary-color:#8000ff;
+$primary-dark-color: #400080;
+$font: #ccc;
+$font-dark: #333;
+
+$background: #fff;
+$background-dark: #ccc;
+$primary-gradient: linear-gradient(to left bottom, #c3b3fff0  0%, #b3fffbf0 100%);
+$dark-gradient: linear-gradient(to top, #000  0%, #444 100%);
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 3px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $primary-dark-color;
+    box-shadow: inset 0 0 2px $primary-color;
+    border-radius: 3px;
+    border: 2px solid #000;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../font/Roboto.ttf") format("ttf");
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    font-family: 'Roboto';
+
+    body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        color: #fff;
+        overflow: hidden;
+
+        .individual-elem {
+            position: absolute;
+            width: 256px;
+            background: $primary-gradient;
+            display: flex;
+            flex-direction: column;
+            z-index: 9;
+            box-shadow: 0px 0px 4px #000;
+            border-radius: 4px;
+
+            p {
+                color: $font-dark;
+                margin: auto;
+                text-align: center;
+            }
+
+            .individual-options {
+                width: 100%;
+                display: flex;
+            }
+
+            .individual-elemheader {
+                width: 32px;
+                height: 32px;
+                padding: 0;
+                background-image: url('../img/drag.png');
+                cursor: move;
+                border-radius: 4px;
+            }
+
+            .individual-elem-nickname {
+                font-size: 1.5em;
+                font-weight: bold;
+                margin: 0 auto;
+                padding: 0 4px 4px;
+            }
+
+            img {
+                width: 128px;
+                height: 128px;
+                margin: 32px auto;
+                box-shadow: 0px 0px 4px 0px #000;
+            }
+
+            img:hover {
+                cursor: grab;
+            }
+
+            .individual-elem-fitness {
+                margin: 8px 8px 8px auto;
+                padding: 4px;
+                font-size: 1.25em;
+            }
+
+            .individual-elem-genes {
+                padding: 4px;
+                max-height: 256px;
+                overflow-y: auto;
+                overflow-wrap: break-word;
+                background: #000;
+                user-select: text;
+                mix-blend-mode: darken;
+            }
+
+            button {
+                width: 32px;
+                height: 32px;
+                padding: 0;
+                margin: 0 0 0 auto;
+                background: transparent;
+                background-image: url('../img/cancel.png');
+                border: none;
+                outline: none;
+            }
+
+            button:hover {
+                background-image: url('../img/cancelhover.png');
+                cursor: pointer;
+            }
+        }
+
+        #main-container {
+            width: 100%;
+            height: 100%;
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+
+            #menu {
+                width: 239px;
+                display: flex;
+                flex-direction: column;
+                color: $font-dark;
+                overflow-y: auto;
+                overflow-x: hidden;
+                min-height: 0px;
+                border-right: 1px solid $background-dark;
+
+                .menu-title {
+                    height: 32px;
+                    padding: 8px;
+                    display: flex;
+                    justify-content: space-between;
+                    border-top: 1px solid transparent;
+                    border-bottom: 1px solid $background-dark;
+
+                    #logo {
+                        width: 32px;
+                        height: 32px;
+                        cursor: pointer;
+                    }
+
+                    p {
+                        margin: auto 8px;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                    }
+                }
+
+                .menu-option {
+                    height: 32px;
+                    padding: 8px;
+                    display: flex;
+                    cursor: pointer;
+
+                    img {
+                        flex-shrink: 0;
+                        width: 32px;
+                        height: 32px;
+                    }
+
+                    .lilimImg {
+                        box-shadow: 0px 0px 2px #000;
+                    }
+
+                    p {
+                        margin: auto 8px auto 16px;
+                    }
+                }
+
+                .menu-option:hover {
+                    background: $background-dark;
+                }
+
+                .addIndividual-option {
+                    margin-bottom: 32px;
+                }
+            }
+
+            #activity {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                padding-right: 340px;
+
+                #activity-title {
+                    width: 100%;
+                    height: 50px;
+                    display: flex;
+                    flex-shrink: 0;
+                    background: $background-dark;
+
+                    button {
+                        height: 30px;
+                        padding: 0 16px;
+                        margin: auto 10px;
+                        background: $primary-color;
+                        font-family: 'Roboto';
+                        color: #fff;
+                        border: none;
+                        border-radius: 4px;
+                        outline: none;
+                        cursor: pointer;
+                    }
+
+                    button:hover {
+                        background: $primary-dark-color;
+                    }
+                }
+
+                #activity-container {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    overflow-y: auto;
+
+                    #create-individual-elem {
+                        width: 100%;
+                        padding: 8px;
+                        display: flex;
+                        flex-direction: column;
+
+                        p {
+                            color: $font-dark;
+                            margin: 8px auto;
+                            text-align: center;
+                            font-size: 1.5em;
+                        }
+
+                        button {
+                            width: 32px;
+                            height: 32px;
+                            margin-left: auto;
+                            background: transparent;
+                            background-image: url('../img/cancel.png');
+                            border: none;
+                            outline: none;
+                        }
+
+                        button:hover {
+                            background-image: url('../img/cancelhover.png');
+                            cursor: pointer;
+                        }
+
+                        .parentContainer {
+                            width: 100%;
+                            margin: 16px auto;
+                            display: flex;
+                            justify-content: space-evenly;
+
+                            #parent1 {
+                                width: 128px;
+                                height: 128px;
+                                background: url('../img/dragdrop.png'), $primary-gradient;
+                                box-shadow: inset 0px 0px 4px 0px #000;
+
+                                img {
+                                    width: 128px;
+                                    height: 128px;
+                                }
+                            }
+
+                            #parent2 {
+                                width: 128px;
+                                height: 128px;
+                                background: url('../img/dragdrop.png'), $primary-gradient;
+                                box-shadow: inset 0px 0px 4px 0px #000;
+
+                                img {
+                                    width: 128px;
+                                    height: 128px;
+                                }
+                            }
+                        }
+
+                        .childContainer {
+                            width: 100%;
+                            margin: 16px auto;
+                            display: flex;
+                            flex-direction: column;
+
+                            img {
+                                width: 128px;
+                                height: 128px;
+                                margin: 8px auto;
+                            }
+
+                            .childName {
+                                width: 256px;
+                                height: 20px;
+                                padding: 10px;
+                                margin: 8px auto;
+                                background: $primary-dark-color;
+                                color: #fff;
+                                border: 2px solid $background-dark;
+                                border-radius: 4px;
+                                font-family: 'Roboto';
+                                overflow: auto;
+                                outline: none;
+                                resize: none;
+                            }
+
+                            .childName:focus {
+                                border: 2px solid $primary-color;
+                                background: #000;
+                            }
+
+                            .confirm-button {
+                                width: 128px;
+                                height: 32px;
+                                padding: 0;
+                                margin: 8px auto;
+                                background: $primary-color;
+                                font-family: 'Roboto';
+                                color: #fff;
+                                border: none;
+                                border-radius: 4px;
+                                outline: none;
+                                cursor: pointer;
+                            }
+
+                            .confirm-button:hover {
+                                background: $primary-dark-color;
+                            }
+                        }
+                    }
+
+                    #evaluate-individual-elem {
+                        width: 100%;
+                        padding: 8px;
+                        display: flex;
+                        flex-direction: column;
+
+                        p {
+                            color: $font-dark;
+                            margin: 8px auto;
+                            text-align: center;
+                            font-size: 1.5em;
+                        }
+
+                        button {
+                            width: 32px;
+                            height: 32px;
+                            margin-left: auto;
+                            background: transparent;
+                            background-image: url('../img/cancel.png');
+                            border: none;
+                            outline: none;
+                        }
+
+                        button:hover {
+                            background-image: url('../img/cancelhover.png');
+                            cursor: pointer;
+                        }
+
+                        .parentContainer {
+                            width: 100%;
+                            margin: 16px auto;
+                            display: flex;
+                            justify-content: space-evenly;
+
+                            #lilim {
+                                width: 128px;
+                                height: 128px;
+                                background: url('../img/dragdrop.png'), $primary-gradient;
+                                box-shadow: inset 0px 0px 4px #000;
+
+                                img {
+                                    width: 128px;
+                                    height: 128px;
+                                }
+                            }
+                        }
+
+                        .childContainer {
+                            width: 100%;
+                            margin: 16px auto;
+                            display: flex;
+                            flex-direction: column;
+
+                            canvas {
+                                width: 512px;
+                                height: 512px;
+                                margin: auto;
+                                background: $primary-color;
+                            }
+
+                            .confirm-button {
+                                width: 128px;
+                                height: 32px;
+                                padding: 0;
+                                margin: 8px auto;
+                                background: $primary-color;
+                                font-family: 'Roboto';
+                                color: #fff;
+                                border: none;
+                                border-radius: 4px;
+                                outline: none;
+                                cursor: pointer;
+                            }
+
+                            .confirm-button:hover {
+                                background: $primary-dark-color;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #chat {
+                width: 339px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                border-left: 1px solid $background;
+                background: $dark-gradient;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+
+                #chat-title {
+                    width: 100%;
+                    height: 48px;
+                    display: flex;
+                    flex-shrink: 0;
+                    border-bottom: 1px solid $background;
+                    border-top: 1px solid transparent;
+                    color: $font;
+
+                    p {
+                        text-transform: uppercase;
+                        margin: auto;
+                        font-weight: bold;
+                    }
+                }
+
+                #chat-board {
+                    width: 100%;
+                    flex-grow: 1;
+                    padding-bottom: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                    min-height: 0px;
+
+                    p {
+                        width: 299px;
+                        margin: 0;
+                        padding: 5px 20px;
+                        overflow-wrap: break-word;
+                    }
+                }
+
+                #chat-input {
+                    width: 319px;
+                    height: 80px;
+                    padding: 0 10px 10px;
+                    display: flex;
+                    flex-direction: column;
+
+                    #chat-textarea {
+                        height: 20px;
+                        padding: 10px;
+                        background: $primary-dark-color;
+                        color: #fff;
+                        border: 2px solid $primary-dark-color;
+                        font-family: 'Roboto';
+                        border-radius: 4px;
+                        overflow: auto;
+                        outline: none;
+                        resize: none;
+                    }
+
+                    #chat-textarea:focus {
+                        border: 2px solid $primary-color;
+                        background: #000;
+                    }
+
+                    ::placeholder {
+                        color: #ccc;
+                        opacity: 1;
+                    }
+
+                    #chat-button-container {
+                        width: 319px;
+                        height: 30px;
+                        margin-top: 10px;
+                        display: flex;
+
+                        #chat-button {
+                            width: 50px;
+                            height: 30px;
+                            padding: 0;
+                            margin-left: auto;
+                            border-radius: 4px;
+                            background: $primary-color;
+                            font-family: 'Roboto';
+                            color: #fff;
+                            border: none;
+                            outline: none;
+                        }
+
+                        #chat-button:hover {
+                            background: $primary-dark-color;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            @media (max-width: 1200px) {
+                #menu {
+                    width: 50px;
+                }
+
+                .menu-title {
+                    p {
+                        display: none;
+                    }
+                }
+
+                .menu-option {
+                    p {
+                        display: none;
+                    }
+                }
+            }
+
+            @media (max-width: 920px) {
+                #chat {
+                    display: none;
+                }
+
+                #activity {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}

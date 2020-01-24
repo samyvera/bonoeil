@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bonoeil</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="js/lib/vector2D.js"></script>
+    <script src="js/lib/dragElement.js"></script>
+    
+    <script src="js/lib/game/lilim.js"></script>
+    <script src="js/lib/game/evaluation.js"></script>
+
+    <script src="js/app/activities/activity.js"></script>
+
+    <script src="js/app/app.js"></script>
+    <script>
+        window.onload = () => new App()
+    </script>
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="menu">
+            <div id="local">
+                <div id="local-title" class="menu-title">
+                    <img id="logo" src="./img/favicon.png">
+                    <p>Bonoeil</p>
+                </div>
+
+                <div id="local-menu"></div>
+
+                <div id="addIndividual-option" class="menu-option">
+                    <img src="./img/plus.png">
+                    <p>New Lilim</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="activity">
+            <div id="activity-title">
+                <button id="evaluate-button">Evaluate</button>
+                <button>Train</button>
+            </div>
+            <div id="activity-container"></div>
+        </div>
+
+        <div id="chat">
+            <div id="chat-title">
+                <p>Chat</p>
+            </div>
+            <div id="chat-board" style="color: #ccc;">
+                <p>Welcome to the chat room!</p>
+            </div>
+            <div id="chat-input">
+                <textarea id="chat-textarea" placeholder="Send a message" maxlength="500"></textarea>
+                <div id="chat-button-container">
+                    <button id="chat-button">Chat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,669 @@
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 3px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #400080;
+  -webkit-box-shadow: inset 0 0 2px #8000ff;
+          box-shadow: inset 0 0 2px #8000ff;
+  border-radius: 3px;
+  border: 2px solid #000;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../font/Roboto.ttf") format("ttf");
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-family: 'Roboto';
+}
+
+html body {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  color: #fff;
+  overflow: hidden;
+}
+
+html body .individual-elem {
+  position: absolute;
+  width: 256px;
+  background: -webkit-gradient(linear, right top, left bottom, from(#c3b3fff0), to(#b3fffbf0));
+  background: linear-gradient(to left bottom, #c3b3fff0 0%, #b3fffbf0 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 9;
+  -webkit-box-shadow: 0px 0px 4px #000;
+          box-shadow: 0px 0px 4px #000;
+  border-radius: 4px;
+}
+
+html body .individual-elem p {
+  color: #333;
+  margin: auto;
+  text-align: center;
+}
+
+html body .individual-elem .individual-options {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html body .individual-elem .individual-elemheader {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background-image: url("../img/drag.png");
+  cursor: move;
+  border-radius: 4px;
+}
+
+html body .individual-elem .individual-elem-nickname {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 0 4px 4px;
+}
+
+html body .individual-elem img {
+  width: 128px;
+  height: 128px;
+  margin: 32px auto;
+  -webkit-box-shadow: 0px 0px 4px 0px #000;
+          box-shadow: 0px 0px 4px 0px #000;
+}
+
+html body .individual-elem img:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+html body .individual-elem .individual-elem-fitness {
+  margin: 8px 8px 8px auto;
+  padding: 4px;
+  font-size: 1.25em;
+}
+
+html body .individual-elem .individual-elem-genes {
+  padding: 4px;
+  max-height: 256px;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  background: #000;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+  mix-blend-mode: darken;
+}
+
+html body .individual-elem button {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin: 0 0 0 auto;
+  background: transparent;
+  background-image: url("../img/cancel.png");
+  border: none;
+  outline: none;
+}
+
+html body .individual-elem button:hover {
+  background-image: url("../img/cancelhover.png");
+  cursor: pointer;
+}
+
+html body #main-container {
+  width: 100%;
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html body #main-container #menu {
+  width: 239px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #333;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0px;
+  border-right: 1px solid #ccc;
+}
+
+html body #main-container #menu .menu-title {
+  height: 32px;
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid #ccc;
+}
+
+html body #main-container #menu .menu-title #logo {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+html body #main-container #menu .menu-title p {
+  margin: auto 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+html body #main-container #menu .menu-option {
+  height: 32px;
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+html body #main-container #menu .menu-option img {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+}
+
+html body #main-container #menu .menu-option .lilimImg {
+  -webkit-box-shadow: 0px 0px 2px #000;
+          box-shadow: 0px 0px 2px #000;
+}
+
+html body #main-container #menu .menu-option p {
+  margin: auto 8px auto 16px;
+}
+
+html body #main-container #menu .menu-option:hover {
+  background: #ccc;
+}
+
+html body #main-container #menu .addIndividual-option {
+  margin-bottom: 32px;
+}
+
+html body #main-container #activity {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 340px;
+}
+
+html body #main-container #activity #activity-title {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background: #ccc;
+}
+
+html body #main-container #activity #activity-title button {
+  height: 30px;
+  padding: 0 16px;
+  margin: auto 10px;
+  background: #8000ff;
+  font-family: 'Roboto';
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+html body #main-container #activity #activity-title button:hover {
+  background: #400080;
+}
+
+html body #main-container #activity #activity-container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-y: auto;
+}
+
+html body #main-container #activity #activity-container #create-individual-elem {
+  width: 100%;
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html body #main-container #activity #activity-container #create-individual-elem p {
+  color: #333;
+  margin: 8px auto;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+html body #main-container #activity #activity-container #create-individual-elem button {
+  width: 32px;
+  height: 32px;
+  margin-left: auto;
+  background: transparent;
+  background-image: url("../img/cancel.png");
+  border: none;
+  outline: none;
+}
+
+html body #main-container #activity #activity-container #create-individual-elem button:hover {
+  background-image: url("../img/cancelhover.png");
+  cursor: pointer;
+}
+
+html body #main-container #activity #activity-container #create-individual-elem .parentContainer {
+  width: 100%;
+  margin: 16px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+html body #main-container #activity #activity-container #create-individual-elem .parentContainer #parent1 {
+  width: 128px;
+  height: 128px;
+  background: url("../img/dragdrop.png"), -webkit-gradient(linear, right top, left bottom, from(#c3b3fff0), to(#b3fffbf0));
+  background: url("../img/dragdrop.png"), linear-gradient(to left bottom, #c3b3fff0 0%, #b3fffbf0 100%);
+  -webkit-box-shadow: inset 0px 0px 4px 0px #000;
+          box-shadow: inset 0px 0px 4px 0px #000;
+}
+
+html body #main-container #activity #activity-container #create-individual-elem .parentContainer #parent1 img {
+  width: 128px;
+  height: 128px;
+}
+
+html body #main-container #activity #activity-container #create-individual-elem .parentContainer #parent2 {
+  width: 128px;
+  height: 128px;
+  background: url("../img/dragdrop.png"), -webkit-gradient(linear, right top, left bottom, from(#c3b3fff0), to(#b3fffbf0));
+  background: url("../img/dragdrop.png"), linear-gradient(to left bottom, #c3b3fff0 0%, #b3fffbf0 100%);
+  -webkit-box-shadow: inset 0px 0px 4px 0px #000;
+          box-shadow: inset 0px 0px 4px 0px #000;
+}
+
+html body #main-container #activity #activity-container #create-individual-elem .parentContainer #parent2 img {
+  width: 128px;
+  height: 128px;
+}
+
+html body #main-container #activity #activity-container #create-individual-elem .childContainer {
+  width: 100%;
+  margin: 16px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html body #main-container #activity #activity-container #create-individual-elem .childContainer img {
+  width: 128px;
+  height: 128px;
+  margin: 8px auto;
+}
+
+html body #main-container #activity #activity-container #create-individual-elem .childContainer .childName {
+  width: 256px;
+  height: 20px;
+  padding: 10px;
+  margin: 8px auto;
+  background: #400080;
+  color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Roboto';
+  overflow: auto;
+  outline: none;
+  resize: none;
+}
+
+html body #main-container #activity #activity-container #create-individual-elem .childContainer .childName:focus {
+  border: 2px solid #8000ff;
+  background: #000;
+}
+
+html body #main-container #activity #activity-container #create-individual-elem .childContainer .confirm-button {
+  width: 128px;
+  height: 32px;
+  padding: 0;
+  margin: 8px auto;
+  background: #8000ff;
+  font-family: 'Roboto';
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+html body #main-container #activity #activity-container #create-individual-elem .childContainer .confirm-button:hover {
+  background: #400080;
+}
+
+html body #main-container #activity #activity-container #evaluate-individual-elem {
+  width: 100%;
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html body #main-container #activity #activity-container #evaluate-individual-elem p {
+  color: #333;
+  margin: 8px auto;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+html body #main-container #activity #activity-container #evaluate-individual-elem button {
+  width: 32px;
+  height: 32px;
+  margin-left: auto;
+  background: transparent;
+  background-image: url("../img/cancel.png");
+  border: none;
+  outline: none;
+}
+
+html body #main-container #activity #activity-container #evaluate-individual-elem button:hover {
+  background-image: url("../img/cancelhover.png");
+  cursor: pointer;
+}
+
+html body #main-container #activity #activity-container #evaluate-individual-elem .parentContainer {
+  width: 100%;
+  margin: 16px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+html body #main-container #activity #activity-container #evaluate-individual-elem .parentContainer #lilim {
+  width: 128px;
+  height: 128px;
+  background: url("../img/dragdrop.png"), -webkit-gradient(linear, right top, left bottom, from(#c3b3fff0), to(#b3fffbf0));
+  background: url("../img/dragdrop.png"), linear-gradient(to left bottom, #c3b3fff0 0%, #b3fffbf0 100%);
+  -webkit-box-shadow: inset 0px 0px 4px #000;
+          box-shadow: inset 0px 0px 4px #000;
+}
+
+html body #main-container #activity #activity-container #evaluate-individual-elem .parentContainer #lilim img {
+  width: 128px;
+  height: 128px;
+}
+
+html body #main-container #activity #activity-container #evaluate-individual-elem .childContainer {
+  width: 100%;
+  margin: 16px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html body #main-container #activity #activity-container #evaluate-individual-elem .childContainer canvas {
+  width: 512px;
+  height: 512px;
+  margin: auto;
+  background: #8000ff;
+}
+
+html body #main-container #activity #activity-container #evaluate-individual-elem .childContainer .confirm-button {
+  width: 128px;
+  height: 32px;
+  padding: 0;
+  margin: 8px auto;
+  background: #8000ff;
+  font-family: 'Roboto';
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+html body #main-container #activity #activity-container #evaluate-individual-elem .childContainer .confirm-button:hover {
+  background: #400080;
+}
+
+html body #main-container #chat {
+  width: 339px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-left: 1px solid #fff;
+  background: -webkit-gradient(linear, left bottom, left top, from(#000), to(#444));
+  background: linear-gradient(to top, #000 0%, #444 100%);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+html body #main-container #chat #chat-title {
+  width: 100%;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid transparent;
+  color: #ccc;
+}
+
+html body #main-container #chat #chat-title p {
+  text-transform: uppercase;
+  margin: auto;
+  font-weight: bold;
+}
+
+html body #main-container #chat #chat-board {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0px;
+}
+
+html body #main-container #chat #chat-board p {
+  width: 299px;
+  margin: 0;
+  padding: 5px 20px;
+  overflow-wrap: break-word;
+}
+
+html body #main-container #chat #chat-input {
+  width: 319px;
+  height: 80px;
+  padding: 0 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html body #main-container #chat #chat-input #chat-textarea {
+  height: 20px;
+  padding: 10px;
+  background: #400080;
+  color: #fff;
+  border: 2px solid #400080;
+  font-family: 'Roboto';
+  border-radius: 4px;
+  overflow: auto;
+  outline: none;
+  resize: none;
+}
+
+html body #main-container #chat #chat-input #chat-textarea:focus {
+  border: 2px solid #8000ff;
+  background: #000;
+}
+
+html body #main-container #chat #chat-input ::-webkit-input-placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+
+html body #main-container #chat #chat-input :-ms-input-placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+
+html body #main-container #chat #chat-input ::-ms-input-placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+
+html body #main-container #chat #chat-input ::placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+
+html body #main-container #chat #chat-input #chat-button-container {
+  width: 319px;
+  height: 30px;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html body #main-container #chat #chat-input #chat-button-container #chat-button {
+  width: 50px;
+  height: 30px;
+  padding: 0;
+  margin-left: auto;
+  border-radius: 4px;
+  background: #8000ff;
+  font-family: 'Roboto';
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+html body #main-container #chat #chat-input #chat-button-container #chat-button:hover {
+  background: #400080;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  html body #main-container #menu {
+    width: 50px;
+  }
+  html body #main-container .menu-title p {
+    display: none;
+  }
+  html body #main-container .menu-option p {
+    display: none;
+  }
+}
+
+@media (max-width: 920px) {
+  html body #main-container #chat {
+    display: none;
+  }
+  html body #main-container #activity {
+    padding-right: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
