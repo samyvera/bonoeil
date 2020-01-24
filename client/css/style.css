@@ -1,20 +1,17 @@
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #400080;
-  -webkit-box-shadow: inset 0 0 2px #8000ff;
-          box-shadow: inset 0 0 2px #8000ff;
+  background: #8000ff;
   border-radius: 3px;
-  border: 2px solid #000;
 }
 
 @font-face {
@@ -100,6 +97,7 @@ html body .individual-elem img {
   margin: 32px auto;
   -webkit-box-shadow: 0px 0px 4px 0px #000;
           box-shadow: 0px 0px 4px 0px #000;
+  border-radius: 4px;
 }
 
 html body .individual-elem img:hover {
@@ -135,11 +133,15 @@ html body .individual-elem button {
   background-image: url("../img/cancel.png");
   border: none;
   outline: none;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 html body .individual-elem button:hover {
   background-image: url("../img/cancelhover.png");
   cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 html body #main-container {
@@ -165,6 +167,8 @@ html body #main-container #menu {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   color: #333;
   overflow-y: auto;
   overflow-x: hidden;
@@ -204,6 +208,8 @@ html body #main-container #menu .menu-option {
   display: -ms-flexbox;
   display: flex;
   cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 html body #main-container #menu .menu-option img {
@@ -224,6 +230,8 @@ html body #main-container #menu .menu-option p {
 
 html body #main-container #menu .menu-option:hover {
   background: #ccc;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 html body #main-container #menu .addIndividual-option {
@@ -266,10 +274,14 @@ html body #main-container #activity #activity-title button {
   border-radius: 4px;
   outline: none;
   cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 html body #main-container #activity #activity-title button:hover {
   background: #400080;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 html body #main-container #activity #activity-container {
@@ -308,11 +320,15 @@ html body #main-container #activity #activity-container #create-individual-elem 
   background-image: url("../img/cancel.png");
   border: none;
   outline: none;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 html body #main-container #activity #activity-container #create-individual-elem button:hover {
   background-image: url("../img/cancelhover.png");
   cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 html body #main-container #activity #activity-container #create-individual-elem .parentContainer {
@@ -333,11 +349,13 @@ html body #main-container #activity #activity-container #create-individual-elem 
   background: url("../img/dragdrop.png"), linear-gradient(to left bottom, #c3b3fff0 0%, #b3fffbf0 100%);
   -webkit-box-shadow: inset 0px 0px 4px 0px #000;
           box-shadow: inset 0px 0px 4px 0px #000;
+  border-radius: 4px;
 }
 
 html body #main-container #activity #activity-container #create-individual-elem .parentContainer #parent1 img {
   width: 128px;
   height: 128px;
+  border-radius: 4px;
 }
 
 html body #main-container #activity #activity-container #create-individual-elem .parentContainer #parent2 {
@@ -347,11 +365,13 @@ html body #main-container #activity #activity-container #create-individual-elem 
   background: url("../img/dragdrop.png"), linear-gradient(to left bottom, #c3b3fff0 0%, #b3fffbf0 100%);
   -webkit-box-shadow: inset 0px 0px 4px 0px #000;
           box-shadow: inset 0px 0px 4px 0px #000;
+  border-radius: 4px;
 }
 
 html body #main-container #activity #activity-container #create-individual-elem .parentContainer #parent2 img {
   width: 128px;
   height: 128px;
+  border-radius: 4px;
 }
 
 html body #main-container #activity #activity-container #create-individual-elem .childContainer {
@@ -370,6 +390,7 @@ html body #main-container #activity #activity-container #create-individual-elem 
   width: 128px;
   height: 128px;
   margin: 8px auto;
+  border-radius: 4px;
 }
 
 html body #main-container #activity #activity-container #create-individual-elem .childContainer .childName {
@@ -379,17 +400,21 @@ html body #main-container #activity #activity-container #create-individual-elem 
   margin: 8px auto;
   background: #400080;
   color: #fff;
-  border: 2px solid #ccc;
+  border: 2px solid #400080;
   border-radius: 4px;
   font-family: 'Roboto';
   overflow: auto;
   outline: none;
   resize: none;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 html body #main-container #activity #activity-container #create-individual-elem .childContainer .childName:focus {
   border: 2px solid #8000ff;
   background: #000;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 html body #main-container #activity #activity-container #create-individual-elem .childContainer .confirm-button {
@@ -404,10 +429,14 @@ html body #main-container #activity #activity-container #create-individual-elem 
   border-radius: 4px;
   outline: none;
   cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 html body #main-container #activity #activity-container #create-individual-elem .childContainer .confirm-button:hover {
   background: #400080;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 html body #main-container #activity #activity-container #evaluate-individual-elem {
@@ -437,11 +466,15 @@ html body #main-container #activity #activity-container #evaluate-individual-ele
   background-image: url("../img/cancel.png");
   border: none;
   outline: none;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 html body #main-container #activity #activity-container #evaluate-individual-elem button:hover {
   background-image: url("../img/cancelhover.png");
   cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 html body #main-container #activity #activity-container #evaluate-individual-elem .parentContainer {
@@ -462,11 +495,13 @@ html body #main-container #activity #activity-container #evaluate-individual-ele
   background: url("../img/dragdrop.png"), linear-gradient(to left bottom, #c3b3fff0 0%, #b3fffbf0 100%);
   -webkit-box-shadow: inset 0px 0px 4px #000;
           box-shadow: inset 0px 0px 4px #000;
+  border-radius: 4px;
 }
 
 html body #main-container #activity #activity-container #evaluate-individual-elem .parentContainer #lilim img {
   width: 128px;
   height: 128px;
+  border-radius: 4px;
 }
 
 html body #main-container #activity #activity-container #evaluate-individual-elem .childContainer {
@@ -500,10 +535,14 @@ html body #main-container #activity #activity-container #evaluate-individual-ele
   border-radius: 4px;
   outline: none;
   cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 html body #main-container #activity #activity-container #evaluate-individual-elem .childContainer .confirm-button:hover {
   background: #400080;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 html body #main-container #chat {
@@ -592,11 +631,15 @@ html body #main-container #chat #chat-input #chat-textarea {
   overflow: auto;
   outline: none;
   resize: none;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 html body #main-container #chat #chat-input #chat-textarea:focus {
   border: 2px solid #8000ff;
   background: #000;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 html body #main-container #chat #chat-input ::-webkit-input-placeholder {
@@ -639,11 +682,15 @@ html body #main-container #chat #chat-input #chat-button-container #chat-button 
   color: #fff;
   border: none;
   outline: none;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 html body #main-container #chat #chat-input #chat-button-container #chat-button:hover {
   background: #400080;
   cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 @media (max-width: 1200px) {

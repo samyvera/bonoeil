@@ -10,20 +10,18 @@ $dark-gradient: linear-gradient(to top, #000  0%, #444 100%);
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: $primary-dark-color;
-    box-shadow: inset 0 0 2px $primary-color;
+    background: $primary-color;
     border-radius: 3px;
-    border: 2px solid #000;
 }
 
 @font-face {
@@ -88,6 +86,7 @@ html {
                 height: 128px;
                 margin: 32px auto;
                 box-shadow: 0px 0px 4px 0px #000;
+                border-radius: 4px;
             }
 
             img:hover {
@@ -119,11 +118,13 @@ html {
                 background-image: url('../img/cancel.png');
                 border: none;
                 outline: none;
+                transition: .2s;
             }
 
             button:hover {
                 background-image: url('../img/cancelhover.png');
                 cursor: pointer;
+                transition: .2s;
             }
         }
 
@@ -138,6 +139,7 @@ html {
                 width: 239px;
                 display: flex;
                 flex-direction: column;
+                flex-shrink: 0;
                 color: $font-dark;
                 overflow-y: auto;
                 overflow-x: hidden;
@@ -170,6 +172,7 @@ html {
                     padding: 8px;
                     display: flex;
                     cursor: pointer;
+                    transition: .2s;
 
                     img {
                         flex-shrink: 0;
@@ -188,6 +191,7 @@ html {
 
                 .menu-option:hover {
                     background: $background-dark;
+                    transition: .2s;
                 }
 
                 .addIndividual-option {
@@ -219,10 +223,12 @@ html {
                         border-radius: 4px;
                         outline: none;
                         cursor: pointer;
+                        transition: .2s;
                     }
 
                     button:hover {
                         background: $primary-dark-color;
+                        transition: .2s;
                     }
                 }
 
@@ -253,11 +259,13 @@ html {
                             background-image: url('../img/cancel.png');
                             border: none;
                             outline: none;
+                            transition: .2s;
                         }
 
                         button:hover {
                             background-image: url('../img/cancelhover.png');
                             cursor: pointer;
+                            transition: .2s;
                         }
 
                         .parentContainer {
@@ -271,10 +279,12 @@ html {
                                 height: 128px;
                                 background: url('../img/dragdrop.png'), $primary-gradient;
                                 box-shadow: inset 0px 0px 4px 0px #000;
+                                border-radius: 4px;
 
                                 img {
                                     width: 128px;
                                     height: 128px;
+                                    border-radius: 4px;
                                 }
                             }
 
@@ -283,10 +293,12 @@ html {
                                 height: 128px;
                                 background: url('../img/dragdrop.png'), $primary-gradient;
                                 box-shadow: inset 0px 0px 4px 0px #000;
+                                border-radius: 4px;
 
                                 img {
                                     width: 128px;
                                     height: 128px;
+                                    border-radius: 4px;
                                 }
                             }
                         }
@@ -301,6 +313,7 @@ html {
                                 width: 128px;
                                 height: 128px;
                                 margin: 8px auto;
+                                border-radius: 4px;
                             }
 
                             .childName {
@@ -310,17 +323,19 @@ html {
                                 margin: 8px auto;
                                 background: $primary-dark-color;
                                 color: #fff;
-                                border: 2px solid $background-dark;
+                                border: 2px solid $primary-dark-color;
                                 border-radius: 4px;
                                 font-family: 'Roboto';
                                 overflow: auto;
                                 outline: none;
                                 resize: none;
+                                transition: .2s;
                             }
 
                             .childName:focus {
                                 border: 2px solid $primary-color;
                                 background: #000;
+                                transition: .2s;
                             }
 
                             .confirm-button {
@@ -335,10 +350,12 @@ html {
                                 border-radius: 4px;
                                 outline: none;
                                 cursor: pointer;
+                                transition: .2s;
                             }
 
                             .confirm-button:hover {
                                 background: $primary-dark-color;
+                                transition: .2s;
                             }
                         }
                     }
@@ -364,11 +381,13 @@ html {
                             background-image: url('../img/cancel.png');
                             border: none;
                             outline: none;
+                            transition: .2s;
                         }
 
                         button:hover {
                             background-image: url('../img/cancelhover.png');
                             cursor: pointer;
+                            transition: .2s;
                         }
 
                         .parentContainer {
@@ -382,10 +401,12 @@ html {
                                 height: 128px;
                                 background: url('../img/dragdrop.png'), $primary-gradient;
                                 box-shadow: inset 0px 0px 4px #000;
+                                border-radius: 4px;
 
                                 img {
                                     width: 128px;
                                     height: 128px;
+                                    border-radius: 4px;
                                 }
                             }
                         }
@@ -415,10 +436,12 @@ html {
                                 border-radius: 4px;
                                 outline: none;
                                 cursor: pointer;
+                                transition: .2s;
                             }
 
                             .confirm-button:hover {
                                 background: $primary-dark-color;
+                                transition: .2s;
                             }
                         }
                     }
@@ -488,11 +511,13 @@ html {
                         overflow: auto;
                         outline: none;
                         resize: none;
+                        transition: .2s;
                     }
 
                     #chat-textarea:focus {
                         border: 2px solid $primary-color;
                         background: #000;
+                        transition: .2s;
                     }
 
                     ::placeholder {
@@ -517,11 +542,13 @@ html {
                             color: #fff;
                             border: none;
                             outline: none;
+                            transition: .2s;
                         }
 
                         #chat-button:hover {
                             background: $primary-dark-color;
                             cursor: pointer;
+                            transition: .2s;
                         }
                     }
                 }

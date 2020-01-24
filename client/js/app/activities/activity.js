@@ -325,9 +325,9 @@ Activity_Evaluate_Individual.step2 = app => {
 
     container.appendChild(childContainer);
 
-    var lilim = document.getElementById("lilim").firstElementChild;
+    var lilimImg = document.getElementById("lilim").firstElementChild;
     var array = [];
-    var pngArr = imgToArray(lilim);
+    var pngArr = imgToArray(lilimImg);
     for (let i = 0; i < pngArr.length; i++) {
         if ((i % 4) !== 3) array.push(pngArr[i]);
     }

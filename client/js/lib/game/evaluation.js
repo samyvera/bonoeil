@@ -11,6 +11,11 @@ class Evaluation {
             this.cx.beginPath();
             this.cx.arc(256, 256, 32, 0, 2 * Math.PI);
             this.cx.fill();
+
+            this.cx.fillStyle = '#fff';
+            this.cx.textAlign = 'center';
+            this.cx.font = 20 + 'px serif';
+            this.cx.fillText(this.lilim.health, 256, 256 + 5);
         };
 
         this.canvas = document.createElement('canvas');
