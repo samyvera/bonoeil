@@ -169,8 +169,8 @@ var fuseImg = (img, src1, src2) => {
 var confirmNewIndividual = (app, name, genes) => {
     if (name) {
         app.individuals.push({
-            genes: base64ToHex(genes.replace("data:image/png;base64,", "")).slice(82, -24),
-            fitness: '???',
+            genes: base64ToHex(genes.replace("data:image/png;base64,", "")).slice(82, -32),
+            fitness: 'Unknown',
             nickname: name
         });
         document.getElementById("activity-container").innerHTML = "";
@@ -333,5 +333,13 @@ Activity_Evaluate_Individual.step2 = app => {
     }
     var lilim = new Lilim(array);
     var evaluation = new Evaluation(childContainer, lilim);
+    evaluation.runEval(app, lilimImg.src);
+}
 
+Activity_Evaluate_Individual.step3 = (app, genes, fitness) => {
+    var originalGenes = base64ToHex(genes.replace("data:image/png;base64,", "")).slice(82, -32);
+    app.individuals.map(lilim =>  {
+        if (lilim.genes === originalGenes) lilim.fitness = fitness;
+    });
+    app.updateLocalIndividuals();
 }

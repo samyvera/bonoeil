@@ -13,13 +13,13 @@ class App {
         this.activity = new Activity();
 
         this.individuals = [{
-                genes: "28538d4e390e00200c82ff3f1a83090dba68a7528e4200920492e8c98d666f32c22d7a2644605792ec0cde0906dda3f7111c0d0b4cc9c486f3bbaf920b1d2d34fb", //
-                fitness: 0,
+                genes: "28538d4e390e00200c82ff3f1a83090dba68a7528e4200920492e8c98d666f32c22d7a2644605792ec0cde0906dda3f7111c0d0b4cc9c486f3bbaf920b1d2d34fb",
+                fitness: 'Unknown',
                 nickname: "Adam"
             },
             {
-                genes: "285363fcffffff7f46464686ffffff3360a31919184072d825c1e20415106505031e409c15784d20e40600290b52f5",//
-                fitness: 10,
+                genes: "285363fcffffff7f46464686ffffff3360a31919184072d825c1e20415106505031e409c15784d20e40600290b52f5",
+                fitness: 'Unknown',
                 nickname: "Lilith"
             }
         ];

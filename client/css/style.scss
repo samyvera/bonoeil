@@ -69,6 +69,7 @@ html {
                 width: 32px;
                 height: 32px;
                 padding: 0;
+                margin: 8px;
                 background-image: url('../img/drag.png');
                 cursor: move;
                 border-radius: 4px;
@@ -113,7 +114,7 @@ html {
                 width: 32px;
                 height: 32px;
                 padding: 0;
-                margin: 0 0 0 auto;
+                margin: 8px 8px 8px auto;
                 background: transparent;
                 background-image: url('../img/cancel.png');
                 border: none;
